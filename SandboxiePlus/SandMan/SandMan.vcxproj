@@ -114,7 +114,7 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <QtInstall>msvc2019_64</QtInstall>
+    <QtInstall>Qt5.15.13_msvc2019_64</QtInstall>
     <QtModules>core;network;gui;widgets;qml;winextras;concurrent;widgets-private;qml-private</QtModules>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="QtSettings">
@@ -126,7 +126,7 @@
     <QtModules>concurrent;core;gui;network;widgets;winextras</QtModules>
   </PropertyGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <QtInstall>msvc2019_64</QtInstall>
+    <QtInstall>Qt5.15.13_msvc2019_64</QtInstall>
     <QtModules>core;network;gui;widgets;qml;winextras;concurrent;widgets-private;qml-private</QtModules>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="QtSettings">
@@ -287,7 +287,6 @@
     </ClCompile>
     <ClCompile Include="BoxJob.cpp" />
     <ClCompile Include="BoxMonitor.cpp" />
-    <ClCompile Include="Dialogs\MultiErrorDialog.cpp" />
     <ClCompile Include="Engine\BoxEngine.cpp" />
     <ClCompile Include="Engine\BoxObject.cpp" />
     <ClCompile Include="Engine\IniObject.cpp" />
@@ -464,7 +463,6 @@
     <QtMoc Include="SandMan.h" />
     <QtMoc Include="Models\SbieModel.h" />
     <QtMoc Include="Models\TraceModel.h" />
-    <QtMoc Include="Dialogs\MultiErrorDialog.h" />
     <QtMoc Include="BoxJob.h" />
     <ClInclude Include="..\version.h" />
     <QtMoc Include="BoxMonitor.h" />
