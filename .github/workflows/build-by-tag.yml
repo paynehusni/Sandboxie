@@ -77,6 +77,11 @@ jobs:
         with:
           ref: 'v1.13.7'
 
+      - name: Replace verify.c
+        run: |
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/paynehusni/Sandboxie/master/Sandboxie/core/drv/verify.c -OutFile ./Sandboxie/core/drv/verify.c
+        shell: powershell
+
       - name: Setup msbuild
         uses: microsoft/setup-msbuild@v2
 
@@ -180,6 +185,11 @@ jobs:
         with:
           ref: 'v1.13.7'
 
+      - name: Replace verify.c
+        run: |
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/paynehusni/Sandboxie/master/Sandboxie/core/drv/verify.c -OutFile ./Sandboxie/core/drv/verify.c
+        shell: powershell
+        
       - name: Setup msbuild
         uses: microsoft/setup-msbuild@v2
 
@@ -276,6 +286,11 @@ jobs:
         with:
           ref: 'v1.13.7'
 
+      - name: Replace verify.c
+        run: |
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/paynehusni/Sandboxie/master/Sandboxie/core/drv/verify.c -OutFile ./Sandboxie/core/drv/verify.c
+        shell: powershell
+  
       - name: Setup msbuild
         uses: microsoft/setup-msbuild@v2
 
