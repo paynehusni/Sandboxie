@@ -3,6 +3,7 @@ name: Sync Tags
 on:
   schedule:
     - cron: '0 0 * * *'  # 每天运行一次
+  workflow_dispatch:
 
 jobs:
   sync:
