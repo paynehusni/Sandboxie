@@ -1,4 +1,4 @@
-name: CI
+name: build-by-tag
 
 on:
   workflow_dispatch:
