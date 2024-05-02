@@ -75,7 +75,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: tags/v1.13.7
+          ref: 'v1.13.7'
 
       - name: Setup msbuild
         uses: microsoft/setup-msbuild@v2
@@ -178,7 +178,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: tags/v1.13.7
+          ref: 'v1.13.7'
 
       - name: Setup msbuild
         uses: microsoft/setup-msbuild@v2
@@ -274,7 +274,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: tags/v1.13.7
+          ref: 'v1.13.7'
 
       - name: Setup msbuild
         uses: microsoft/setup-msbuild@v2
