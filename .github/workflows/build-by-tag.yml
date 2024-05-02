@@ -174,14 +174,6 @@ jobs:
             Installer/SbiePlus_x64/*
           retention-days: 60
 
-      - name: Commit files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add Installer/SbiePlus_x64/*
-          git commit -m "Add built files to release branch"
-          git push origin HEAD:out-of-date
-
 
   Build_ARM64:
     runs-on: windows-2019
@@ -283,14 +275,6 @@ jobs:
             Installer/SbiePlus_a64/*
           retention-days: 60
 
-      - name: Commit files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add Installer/SbiePlus_x64/*
-          git commit -m "Add built files to release branch"
-          git push origin HEAD:out-of-date
-
 
   Build_x86:
     runs-on: windows-2019
@@ -367,10 +351,3 @@ jobs:
             Installer/SbiePlus_x86/*
           retention-days: 60
 
-      - name: Commit files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add Installer/SbiePlus_x64/*
-          git commit -m "Add built files to release branch"
-          git push origin HEAD:out-of-date
