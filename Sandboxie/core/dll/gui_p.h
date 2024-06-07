@@ -100,6 +100,13 @@ typedef void (*P_SwitchToThisWindow)(HWND hWnd, BOOL fAlt);
 
 typedef HWND(*P_SetActiveWindow)(HWND hWnd);
 
+typedef UINT_PTR (*P_SetTimer)(
+	 HWND hWnd,
+     UINT_PTR nIDEvent,
+     UINT uElapse,
+	 TIMERPROC lpTimerFunc
+);
+
 typedef BOOL (*P_GetCursorPos)(LPPOINT lpPoint);
 
 typedef BOOL (*P_SetCursorPos)(int x, int y);
@@ -453,8 +460,6 @@ typedef HBITMAP(*P_CreateCompatibleBitmap)(_In_ HDC hdc, _In_ int cx, _In_ int c
 
 typedef BOOL (*P_ShutdownBlockReasonCreate)(HWND hWnd, LPCWSTR pwszReason);
 
-typedef EXECUTION_STATE (*P_SetThreadExecutionState)(EXECUTION_STATE esFlags);
-
 typedef BOOL (*P_SetThreadDesktop)(HDESK hDesktop);
 
 typedef BOOL (*P_SwitchDesktop)(HDESK hDesktop);
@@ -612,11 +617,12 @@ GUI_SYS_VAR_2(SendMessage)
 GUI_SYS_VAR_2(SendMessageTimeout)
 //GUI_SYS_VAR_2(SendMessageCallback)
 GUI_SYS_VAR(ShutdownBlockReasonCreate)
-GUI_SYS_VAR(SetThreadExecutionState)
 GUI_SYS_VAR_2(SendNotifyMessage)
 GUI_SYS_VAR_2(PostMessage)
 GUI_SYS_VAR_2(PostThreadMessage)
 GUI_SYS_VAR_2(DispatchMessage)
+
+GUI_SYS_VAR(SetTimer)
 
 GUI_SYS_VAR(MapWindowPoints)
 GUI_SYS_VAR(ClientToScreen)
