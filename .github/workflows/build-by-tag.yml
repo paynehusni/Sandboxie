@@ -20,7 +20,7 @@ jobs:
       - name: Replace verify.c
         run: |
           echo ${{ env.verify_file_url }}
-          Invoke-WebRequest -Uri ${{ verify_file_url }} -OutFile ./Sandboxie/core/drv/verify.c
+          Invoke-WebRequest -Uri ${{ env.verify_file_url }} -OutFile ./Sandboxie/core/drv/verify.c
         shell: powershell
 
       - name: Setup msbuild
