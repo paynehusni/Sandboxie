@@ -5,6 +5,7 @@ on:
 
 env:
   verify_file_url: https://raw.githubusercontent.com/paynehusni/Sandboxie/master/Sandboxie/core/drv/verify.c
+  release_version_tag: v1.13.7
 
 jobs:
   Build_x64:
@@ -15,11 +16,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: 'v1.13.7'
+          ref: ${{ release_version_tag }}
 
       - name: Replace verify.c
         run: |
-          echo ${{ env.verify_file_url }}
           Invoke-WebRequest -Uri ${{ env.verify_file_url }} -OutFile ./Sandboxie/core/drv/verify.c
         shell: powershell
 
