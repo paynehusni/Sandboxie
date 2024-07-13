@@ -16,7 +16,7 @@ env:
   ghQtBuilds_hash_x86: bf4124046cc50ccbbeb3f786c041e884fd4205cd6e616070a75c850105cbf1db
   ghQtBuilds_hash_x64: 30290d82a02bfaa24c1bf37bcb9c074aba18a673a7176628fccdf71197cee898
   verify_file_url: https://raw.githubusercontent.com/paynehusni/Sandboxie/master/BypassVerify1.14.1plus.c
-  release_version_tag: v1.14.3
+  release_version_tag: v1.14.4
 
 jobs:
   Build_x64:
@@ -110,7 +110,7 @@ jobs:
 
       - name: Upload installer assets
         #if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request'
-        uses: actions/upload-artifact@v4.3.3
+        uses: actions/upload-artifact@v4.3.4
         with:
           name: Assets
           path: |
@@ -119,7 +119,7 @@ jobs:
 
       - name: Upload Sandboxie x64
         #if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request'
-        uses: actions/upload-artifact@v4.3.3
+        uses: actions/upload-artifact@v4.3.4
         with:
           name: Sandboxie_x64
           path: |
@@ -220,7 +220,7 @@ jobs:
 
       - name: Upload Sandboxie ARM64
         #if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request'
-        uses: actions/upload-artifact@v4.3.3
+        uses: actions/upload-artifact@v4.3.4
         with:
           name: Sandboxie_ARM64
           path: |
@@ -296,7 +296,7 @@ jobs:
 
       - name: Upload Sandboxie x86
         #if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request'
-        uses: actions/upload-artifact@v4.3.3
+        uses: actions/upload-artifact@v4.3.4
         with:
           name: Sandboxie_x86
           path: |
