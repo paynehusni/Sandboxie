@@ -2,17 +2,18 @@ name: Sync Tags
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 每天运行一次
-  workflow_dispatch:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0  # 获取所有历史记录和标签
+          fetch-depth: 0  # Fetch all history for all branches and tags
 
       - name: Configure Git
         run: |
@@ -25,5 +26,5 @@ jobs:
       - name: Fetch upstream tags
         run: git fetch upstream --tags
 
-      - name: Push tags
+      - name: Push tags to origin
         run: git push origin --tags
