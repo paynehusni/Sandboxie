@@ -134,8 +134,9 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.5
         with:
+          repository: sandboxie-plus/Sandboxie
           ref: ${{ env.release_version_tag }}
 
       - name: Replace verify.c
@@ -235,8 +236,9 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.5
         with:
+          repository: sandboxie-plus/Sandboxie
           ref: ${{ env.release_version_tag }}
 
       - name: Replace verify.c
